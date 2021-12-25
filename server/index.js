@@ -15,6 +15,10 @@ app.use(express.urlencoded({limit : "30mb", extended : true}));
 app.use(cors());
 app.use('/posts', postRoutes); //adding prefix of posts to every
 
+app.get('/', (req, res) => {
+    res.send("welcome to mfm api's...:)")
+})
+
 // const CONNECTION_URL = 'mongodb+srv://moviesChahat:chahatDB@cluster0.6lk70.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 5000;
 

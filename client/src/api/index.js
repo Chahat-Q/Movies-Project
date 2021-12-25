@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/posts';
+const url = 'https://my-favorite-movie.herokuapp.com/posts';
 
 export const fetchPosts = () => axios.get(url); //fetching posts that we get in the backend
 export const createPost = (newPost) => axios.post(url, newPost);
